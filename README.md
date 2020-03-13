@@ -1,3 +1,12 @@
+<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
+<script type="text/x-mathjax-config">
+ MathJax.Hub.Config({
+ tex2jax: {
+ inlineMath: [["\\(","\\)"] ],
+ displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+ }
+ });
+</script>
 # LoveDifferentialEquation
 ## Abstract
 Differential Equation is a powerful tool to model how systems change over time. In this paper, I propose the differential equation architectures for love and see this model simulates the love dynamics well. Previous research suggested the linear differential equation model for love between two people. Here, I generalize this model to the loves between the n people and incorporate the idea of popularity, gender, and capacity into this model, which are impossible to consider in two people’s love. Also, I will show this initial problem is well posed.
