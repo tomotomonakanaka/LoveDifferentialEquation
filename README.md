@@ -1,12 +1,3 @@
-<script async src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-AMS_CHTML"></script>
-<script type="text/x-mathjax-config">
- MathJax.Hub.Config({
- tex2jax: {
- inlineMath: [["\\(","\\)"] ],
- displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
- }
- });
-</script>
 # LoveDifferentialEquation
 ## Abstract
 Differential Equation is a powerful tool to model how systems change over time. In this paper, I propose the differential equation architectures for love and see this model simulates the love dynamics well. Previous research suggested the linear differential equation model for love between two people. Here, I generalize this model to the loves between the n people and incorporate the idea of popularity, gender, and capacity into this model, which are impossible to consider in two people’s love. Also, I will show this initial problem is well posed.
@@ -23,7 +14,7 @@ $$
 which is naturally induced from Eq.~(\ref{eq:one}).
 $\alpha_{i,j}$ and $\beta_{i,j}$ are constants and defined by popularity and love constitution.
 
-\subsection{Popularity}
+## Popularity
 To model the popularity of the person, we define
 \begin{equation}
  \alpha_{i,j} = \alpha_{i,j}' + p_{j}
@@ -35,7 +26,7 @@ To model the popularity of the person, we define
 \end{equation}
 $\alpha_{i,j}'$ and $\beta_{i,j}'$ are i's love constitution, and $p_{j}$ is the popularity of j. If $p_{j}$ is big then j's popularity is high.
 
-\subsection{Capacity}
+## Capacity
 In the real world, people cannot love all people. Therefore, we introduce the concept of capacity of love to this model.
 \begin{equation}
  \frac{dx_{i,j}}{dt} = \alpha_{i,j} x_{i,j} + \beta_{i,j} x_{j,i} + sgn(x_{i,j})\gamma_{i,j}(1-|x_i|)
@@ -43,7 +34,7 @@ In the real world, people cannot love all people. Therefore, we introduce the co
 \end{equation}
 where $|x_i| = \sqrt{\sum_j x_{i,j}^2}$ and $\gamma_{i,j}$ is a constant.
 
-\subsection{Gender}
+## Gender
 To model gender, we initialize $x_{i,j}$ as
 \begin{equation}
   x^{(0)}_{i,j}= \begin{cases}
