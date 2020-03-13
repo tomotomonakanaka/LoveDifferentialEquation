@@ -1,15 +1,16 @@
-#LoveDifferentialEquation
+# LoveDifferentialEquation
 ## Abstract
 Differential Equation is a powerful tool to model how systems change over time. In this paper, I propose the differential equation architectures for love and see this model simulates the love dynamics well. Previous research suggested the linear differential equation model for love between two people. Here, I generalize this model to the loves between the n people and incorporate the idea of popularity, gender, and capacity into this model, which are impossible to consider in two people’s love. Also, I will show this initial problem is well posed.
 
 
-\section{Model}
-To construct the model, first we define the feeling from i to j. Let us denote the i's feeling to j at time t by $x_{i,j}(t)$. Now, we assume that the change of i's feeling only depends on the feeling from i to j and the feeling from j to i. The ordinary differential equation is written like
+## Model
+To construct the model, first we define the feeling from i to j. Let us denote the i's feeling to j at time t by $$x_{i,j}(t)$$.
+Now, we assume that the change of i's feeling only depends on the feeling from i to j and the feeling from j to i. The ordinary differential equation is written like
 
-\begin{equation}
+$$
  \frac{dx_{i,j}}{dt} = \alpha_{i,j} x_{i,j} + \beta_{i,j} x_{j,i}
  \label{eq:one}
-\end{equation}
+ $$
 which is naturally induced from Eq.~(\ref{eq:one}).
 $\alpha_{i,j}$ and $\beta_{i,j}$ are constants and defined by popularity and love constitution.
 
