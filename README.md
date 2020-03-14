@@ -1,2 +1,1 @@
 # LoveDifferentialEquation
-![top-page](https://github.com/tomotomonakanaka/LoveDifferentialEquation/blob/master/Explanation.pdf)
